@@ -1,4 +1,4 @@
-# obsidian_clipper_templates
+# Structured Capture of Information I Consume
 Like many others, I use Obsidian to capture, record and store information with a goal of creating a self-hosted, private repository of files that are relevant to my life. 
 I use Obsidian Web Clipper extensively along with iOS shortcuts to extract and structure information from the web into Markdown files that are saved into my Obsidian Vault. If any of these are useful for you, browse this repo.
 
@@ -16,3 +16,5 @@ Trigger templates from the website name
 3. [Wikipedia](https://github.com/suchstance/ss_obsidian/blob/main/clipper_templates/wikipedia.json) clips the first paragraph of articles I want to save
 
 
+iOS Shorcuts to create Obsidian Files
+1. [Music Journal](https://github.com/suchstance/ss_obsidian/blob/main/ios-shortcuts-to-obsidian/music-journal) instantly capture song metadata and lyrics from shazam to obsidian
