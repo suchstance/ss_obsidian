@@ -1,0 +1,46 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Recipes_structured 2",
+	"behavior": "create",
+	"noteContentFormat": "### Ingredients\n{{schema:@Recipe:recipeIngredient|list:numbered}}\n\n### Apparatus\n\n### Instructions\n{{schema:@Recipe:recipeInstructions[*].itemListElement[*].text|list:numbered}}\n\n",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "recipe tags",
+			"value": "{{schema:@Recipe:keywords}}",
+			"type": "text"
+		},
+		{
+			"name": "total cook time",
+			"value": "{{schema:@Recipe:totalTime|duration:\\\"mm\\\"}} minutes",
+			"type": "text"
+		},
+		{
+			"name": "MoC",
+			"value": "[[Recipes]]",
+			"type": "text"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title}}",
+	"path": ""
+}
