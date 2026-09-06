@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Board games",
+	"behavior": "create",
+	"noteContentFormat": "<img src=\"{{image}} alt=\"{{title}}>\n\n\n# Description\n{{description}}\n\n## First Played\nDate:\nPlayer Number:\nHost:\n\n### First Impressions",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "date",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "first review",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "later review",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "buy",
+			"value": "",
+			"type": "checkbox"
+		},
+		{
+			"name": "MoC",
+			"value": "[[Board Games]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://boardgamegeek.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": ""
+}

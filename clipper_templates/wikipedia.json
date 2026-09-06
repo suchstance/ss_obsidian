@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Wikipedia",
+	"behavior": "create",
+	"noteContentFormat": "{{content|split:\"\\n\\n\"|slice:0,1}}",
+	"properties": [
+		{
+			"name": "date",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "ctime",
+			"value": "{{date}}",
+			"type": "datetime"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, wikipedia",
+			"type": "multitext"
+		},
+		{
+			"name": "MoC",
+			"value": "[[Wikipedia]]",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://en.wikipedia.org/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": ""
+}
