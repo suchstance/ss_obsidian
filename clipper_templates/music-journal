@@ -1,0 +1,38 @@
+## 🎵 Music Journal
+
+**What it does:** Recognizes the song currently playing and automatically creates a new, pre-filled note in Obsidian to log it. Captures the song title, artist, artwork, date, and a synced lyric snippet, and links the note into a central "Music Journal" MOC (Map of Content).
+
+## Trigger
+Run manually from a home screen button while a song is currently playing
+
+## How it works
+
+1. **Recognize Music** — listens to ambient audio and identifies the currently playing song (does not add it to Apple Music library; errors if unrecognized).
+2. **Guard clause** — if no title is recognized, the shortcut stops immediately rather than creating a blank/broken note.
+3. **Build a Journal ID** — combines a fixed label ("2026 Music Journal") with the current date, for tracking/reference.
+4. **Construct the note body** — generates YAML frontmatter plus a templated body:
+```yaml
+   ---
+   date: {Date}
+   song: {Title}
+   artist: {Artist}
+   artwork: {Artwork}
+   memory:
+   title: {Journal_ID}
+   Moc: "[[Music Journal]]"
+   ---
+   ### Lyric Snippet
+   {Lyrics Snippet Synced}
+
+   ### Memories
+```
+5. **Copy to clipboard** — the full note content is staged on the clipboard for Obsidian to pick up.
+6. **Sanitize the song title** — strips brackets/newlines and URL-encodes spaces, so the title is safe to use as a filename.
+7. **Create the note in Obsidian** — opens Obsidian, then fires a `obsidian://new` URL scheme call targeting a specific vault, using the sanitized song title as the filename and `clipboard=TRUE` to pull in the pre-built content.
+8. **Return home** — backgrounds both apps to leave you back at the Home Screen.
+
+## Get it
+[Music Journal](https://www.icloud.com/shortcuts/557004a450174c52bc45bc6235b708ec)
+
+
+
