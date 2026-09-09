@@ -1,4 +1,5 @@
 # LLM Wiki over Clippings — Phase 1: Ingestion
+#### Co-created with Claude Code
 
 `scan_clippings.py` walks an Obsidian vault, finds every note tagged
 `clippings` (in frontmatter `tags`, as a list or comma string, or as an
@@ -25,9 +26,7 @@ skip notes that haven't changed since the last run.
 
 `clipper_templates/goodreads.json` tags book notes with genre tags
 (`genres/scifi`, etc.) but not the bare `clippings` tag, so book notes are
-currently invisible to this scan. Either add `clippings` to that template's
-`tags` property, or tell the next phase to also treat any `genres/*` tag as
-a clippings-equivalent — worth deciding before Phase 2.
+currently invisible to this scan. Only default clippings are available for the wiki creation
 
 ## Next phases
 
